@@ -108,20 +108,22 @@ class MITS_ContentforProductsListing
             if (is_array($mits_contentsites) && sizeof($mits_contentsites) > 0) {
                 $mits_content_counter = 1;
                 foreach ($mits_contentsites as $mits_prod_content) {
-                    $content_data = $main->getContentData($mits_prod_content, '', '', false);
-                    $mits_content_heading = isset($content_data['content_heading']) && $content_data['content_heading'] != '' ? $content_data['content_heading'] : $content_data['content_title'];
-                    if ($mits_content_counter == 1) {
-											  $productContent['MITS_CONTENT_ID'] = $mits_prod_content;
-                        $productContent['MITS_CONTENT_HEADING'] = $mits_content_heading;
-                        $productContent['MITS_CONTENT_TEXT'] = $content_data['content_text'];
+                    $mits_content_data = $main->getContentData($mits_prod_content, '', '', false);
+                    if (is_array($mits_content_data) && sizeof($mits_content_data) > 0) {
+                        $mits_content_heading = isset($mits_content_data['content_heading']) && $mits_content_data['content_heading'] != '' ? $mits_content_data['content_heading'] : $mits_content_data['content_title'];
+                        if ($mits_content_counter == 1) {
+                            $productContent['MITS_CONTENT_ID'] = $mits_prod_content;
+                            $productContent['MITS_CONTENT_HEADING'] = $mits_content_heading;
+                            $productContent['MITS_CONTENT_TEXT'] = $mits_content_data['content_text'];
+                        }
+                        $productContent['MITS_CONTENT_ID_' . $mits_content_counter] = $mits_prod_content;
+                        $productContent['MITS_CONTENT_HEADING_' . $mits_content_counter] = $mits_content_heading;
+                        $productContent['MITS_CONTENT_TEXT_' . $mits_content_counter] = $mits_content_data['content_text'];
+                        $mits_prod_content_data[$mits_content_counter]['MITS_CONTENT_ID'] = $mits_prod_content;
+                        $mits_prod_content_data[$mits_content_counter]['MITS_CONTENT_HEADING'] = $mits_content_heading;
+                        $mits_prod_content_data[$mits_content_counter]['MITS_CONTENT_TEXT'] = $mits_content_data['content_text'];
+                        $productContent['mits_content_data'] = $mits_prod_content_data;
                     }
-                    $productContent['MITS_CONTENT_ID_' . $mits_content_counter] = $mits_prod_content;
-										$productContent['MITS_CONTENT_HEADING_' . $mits_content_counter] = $mits_content_heading;
-                    $productContent['MITS_CONTENT_TEXT_' . $mits_content_counter] = $content_data['content_text'];
-                    $mits_prod_content_data[$mits_content_counter]['MITS_CONTENT_ID'] = $mits_prod_content;
-										$mits_prod_content_data[$mits_content_counter]['MITS_CONTENT_HEADING'] = $mits_content_heading;
-                    $mits_prod_content_data[$mits_content_counter]['MITS_CONTENT_TEXT'] = $content_data['content_text'];
-                    $productContent['mits_content_data'] = $mits_prod_content_data;
                     $mits_content_counter++;
                 }
             }
