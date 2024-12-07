@@ -17,10 +17,10 @@ defined('_VALID_XTC') or die('Direct Access to this location is not allowed.');
 if (defined('MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_STATUS') && MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_STATUS == 'true') {
 
     $mits_content_dropdowns = '';
+    $mits_prod_content_counter = 1;
     if (isset($cInfo->mits_contentsite_coid) && $cInfo->mits_contentsite_coid != '') {
         $mits_prod_content_array = explode(',', $cInfo->mits_contentsite_coid);
         if (is_array($mits_prod_content_array) && sizeof($mits_prod_content_array) > 0) {
-            $mits_prod_content_counter = 1;
             foreach ($mits_prod_content_array as $mits_prod_content) {
                 $mits_content_dropdowns .= '
                   <tr>
@@ -32,7 +32,7 @@ if (defined('MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_STATUS') && MODULE_CATEGORI
                       <div class="main" style="padding:0 0 8px 0;">
                       ' . mits_content_dropdown('mits_contentsites_coids[]', $mits_prod_content) . '
                       <span class="tooltip">
-                        <img src="images/icons/tooltip_icon.png"  style="border:0;">
+                        <img src="images/icons/tooltip_icon.png" alt="Tooltip" style="border:0;">
                         <em>' . MITS_CONTENTFORPRODUCTSANDCATEGORIES_TOOLTIP . '<code>{$MITS_CONTENT_ID_' . $mits_prod_content_counter .'}<br>{$MITS_CONTENT_HEADING_' . $mits_prod_content_counter .'}<br>{$MITS_CONTENT_TEXT_' . $mits_prod_content_counter .'}</code></em>
                       </span>
                     </div>
@@ -54,7 +54,7 @@ if (defined('MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_STATUS') && MODULE_CATEGORI
           <div class="main" style="padding:0 0 8px 0;">
             ' . mits_content_dropdown('mits_contentsites_coids[]', '') . '
             <span class="tooltip">
-              <img src="images/icons/tooltip_icon.png"  style="border:0;">
+              <img src="images/icons/tooltip_icon.png" alt="Tooltip" style="border:0;">
               <em>' . MITS_CONTENTFORPRODUCTSANDCATEGORIES_TOOLTIP . '<code>{$MITS_CONTENT_ID_' . $mits_prod_content_counter .'}<br>{$MITS_CONTENT_HEADING_' . $mits_prod_content_counter .'}<br>{$MITS_CONTENT_TEXT_' . $mits_prod_content_counter .'}</code></em>
             </span>
           </div>
