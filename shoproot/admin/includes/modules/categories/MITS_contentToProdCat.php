@@ -68,6 +68,7 @@ class MITS_contentToProdCat
         return array(
           $this->name . '_STATUS',
           $this->name . '_SORT_ORDER',
+          $this->name . '_ONLY_ACTIVE',
         );
     }
 
@@ -81,6 +82,9 @@ class MITS_contentToProdCat
         );
         xtc_db_query(
           "INSERT INTO " . TABLE_CONFIGURATION . " (configuration_key, configuration_value, configuration_group_id, sort_order, set_function, date_added) VALUES ('" . $this->name . "_VERSION', '" . $this->version . "', 6, 99, NULL, now())"
+        );
+        xtc_db_query(
+          "INSERT INTO " . TABLE_CONFIGURATION . " (configuration_key, configuration_value, configuration_group_id, sort_order, set_function, date_added) VALUES ('" . $this->name . "_ONLY_ACTIVE', 'false','6', '1','xtc_cfg_select_option(array(\'true\', \'false\'), ', now())"
         );
         xtc_db_query("ALTER TABLE " . TABLE_PRODUCTS . " ADD mits_contentsite_coid VARCHAR(255) NULL");
         xtc_db_query("ALTER TABLE " . TABLE_CATEGORIES . " ADD mits_contentsite_coid VARCHAR(255) NULL");

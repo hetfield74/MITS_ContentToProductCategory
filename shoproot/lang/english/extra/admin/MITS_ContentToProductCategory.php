@@ -45,6 +45,8 @@ $lang_array = array(
     <div style="text-align:center;"><a style="background:#6a9;color:#444" target="_blank" href="https://www.merz-it-service.de/Kontakt.html" class="button" onclick="this.blur();">Kontaktseite auf MerZ-IT-SerVice.de</strong></a></div>',
   'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_STATUS_TITLE'       => 'Modul aktivieren?',
   'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_STATUS_DESC'        => 'Das Modul MITS Content f&uuml;r Artikel und Kategorien aktivieren',
+  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_ONLY_ACTIVE_TITLE'  => 'Inaktiven Content anzeigen?',
+  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_ONLY_ACTIVE_DESC'   => 'Soll das Modul im Frontend Content-Inhalte anzeigen, die den Status "aktiv" = Nein besitzen?',
   'MITS_CONTENTFORPRODUCTSANDCATEGORIES_TEXT'                  => 'Content-Seite Nr.',
   'MITS_CONTENTFORPRODUCTSANDCATEGORIES_TOOLTIP'               => 'Im Template verf&uuml;gbare Smarty-Variablen:<br>',
   'MODULE_PRODUCT_MITS_CONTENTFORPRODUCTSLISTING_TITLE'        => 'MITS Content f&uuml;r Artikel und Kategorien  <span style="white-space:nowrap;">&copy; by <span style="padding:2px;background:#ffe;color:#6a9;font-weight:bold;">Hetfield (MerZ IT-SerVice)</span></span>',

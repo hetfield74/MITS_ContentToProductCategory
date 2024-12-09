@@ -18,8 +18,9 @@ if (defined('MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_STATUS') && MODULE_CATEGORI
     $mits_contentsites = explode(',', $category['mits_contentsite_coid']);
     if (is_array($mits_contentsites) && sizeof($mits_contentsites) > 0) {
         $mits_content_counter = 1;
+        $mit_get_cactive = defined('MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_ONLY_ACTIVE') && MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_ONLY_ACTIVE == 'true' ? true : false;
         foreach ($mits_contentsites as $mits_prod_content) {
-            $mits_content_data = $main->getContentData($mits_prod_content, '', '', false);
+            $mits_content_data = $main->getContentData($mits_prod_content, '', '', $mit_get_cactive);
             if (is_array($mits_content_data) && sizeof($mits_content_data) > 0) {
                 $mits_content_heading = isset($content_data['content_heading']) && $mits_content_data['content_heading'] != '' ? $mits_content_data['content_heading'] : $mits_content_data['content_title'];
                 if ($mits_content_counter == 1) {
