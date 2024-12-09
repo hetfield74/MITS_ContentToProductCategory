@@ -28,7 +28,7 @@ class MITS_contentToProdCat
     {
         $this->code = 'MITS_contentToProdCat';
         $this->name = 'MODULE_CATEGORIES_' . strtoupper($this->code);
-        $this->version = '1.0.0';
+        $this->version = '1.0.1';
         $this->title = defined($this->name . '_TITLE') ? constant($this->name . '_TITLE') . ' - v' . $this->version : $this->code . ' - v' . $this->version;
         $this->description = defined($this->name . '_DESCRIPTION') ? constant($this->name . '_DESCRIPTION') : '';
         $this->enabled = defined($this->name . '_STATUS') && constant($this->name . '_STATUS') == 'true';
