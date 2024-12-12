@@ -27,7 +27,7 @@ class MITS_ContentforProductsListing
     {
         $this->code = 'MITS_ContentforProductsListing';
         $this->name = 'MODULE_PRODUCT_' . strtoupper($this->code);
-        $this->version = '1.0.0';
+        $this->version = '1.0.2';
         $this->title = defined($this->name . '_TITLE') ? constant($this->name . '_TITLE') . ' - v' . $this->version : $this->code . ' - v' . $this->version;
         $this->description = defined($this->name . '_DESCRIPTION') ? constant($this->name . '_DESCRIPTION') : '';
         $this->enabled = defined($this->name . '_STATUS') && constant($this->name . '_STATUS') == 'true';
@@ -43,19 +43,10 @@ class MITS_ContentforProductsListing
         }
     }
 
-    function display()
-    {
-        $display = '<input type="hidden" name="configuration[' . constant($this->name . '_VERSION.') . ']" value="' . $this->version . '" />';
-
-        return array(
-          'text' => $display
-        );
-    }
-
     function check()
     {
         if (!isset($this->_check)) {
-            if (defined($this->name . '_STATUS') && !defined('RUN_MODE_ADMIN')) {
+            if (defined($this->name . '_STATUS')) {
                 $this->_check = true;
             } else {
                 $check_query = xtc_db_query("SELECT configuration_value FROM " . TABLE_CONFIGURATION . " WHERE configuration_key = '" . $this->name . "_STATUS'");
