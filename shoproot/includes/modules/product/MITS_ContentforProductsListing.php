@@ -27,7 +27,7 @@ class MITS_ContentforProductsListing
     {
         $this->code = 'MITS_ContentforProductsListing';
         $this->name = 'MODULE_PRODUCT_' . strtoupper($this->code);
-        $this->version = '1.0.2';
+        $this->version = '1.0.3';
         $this->title = defined($this->name . '_TITLE') ? constant($this->name . '_TITLE') . ' - v' . $this->version : $this->code . ' - v' . $this->version;
         $this->description = defined($this->name . '_DESCRIPTION') ? constant($this->name . '_DESCRIPTION') : '';
         $this->enabled = defined($this->name . '_STATUS') && constant($this->name . '_STATUS') == 'true';

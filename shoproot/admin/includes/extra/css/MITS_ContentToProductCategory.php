@@ -36,4 +36,19 @@
     max-width: 100%;
     overflow: auto;
   }
+  .mits_content_head{
+    cursor:pointer;
+  }
+  .toggle_arrow {
+    background: url("images/arrow_down.gif") center center no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+  }
+  .toggle_arrow_up {
+    background: url("images/arrow_up.gif") center center no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+  }
 </style>
