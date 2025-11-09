@@ -13,8 +13,8 @@
  */
 
 $lang_array = array(
-  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_TITLE'              => 'MITS Content f&uuml;r Artikel und Kategorien  <span style="white-space:nowrap;">&copy; by <span style="padding:2px;background:#ffe;color:#6a9;font-weight:bold;">Hetfield (MerZ IT-SerVice)</span></span>',
-  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_DESCRIPTION'        => '
+  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_TITLE'                        => 'MITS Content f&uuml;r Artikel und Kategorien  <span style="white-space:nowrap;">&copy; by <span style="padding:2px;background:#ffe;color:#6a9;font-weight:bold;">Hetfield (MerZ IT-SerVice)</span></span>',
+  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_DESCRIPTION'                  => '
     <a href="https://www.merz-it-service.de/" target="_blank">
       <img src="' . (ENABLE_SSL === true ? HTTPS_SERVER : HTTP_SERVER) . DIR_WS_CATALOG . DIR_WS_IMAGES . 'merz-it-service.png" border="0" alt="MerZ IT-SerVice" style="display:block;max-width:100%;height:auto;">
     </a><br>
@@ -43,14 +43,22 @@ $lang_array = array(
     </div>
     <p>Bei Fragen, Problemen oder W&uuml;nschen zu diesem Modul oder auch zu anderen Anliegen rund um die modified eCommerce Shopsoftware nehmen Sie einfach Kontakt zu uns auf:</p> 
     <div style="text-align:center;"><a style="background:#6a9;color:#444" target="_blank" href="https://www.merz-it-service.de/Kontakt.html" class="button" onclick="this.blur();">Kontaktseite auf MerZ-IT-SerVice.de</strong></a></div>',
-  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_STATUS_TITLE'       => 'Modul aktivieren?',
-  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_STATUS_DESC'        => 'Das Modul MITS Content f&uuml;r Artikel und Kategorien aktivieren',
-  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_ONLY_ACTIVE_TITLE'  => 'Inaktiven Content anzeigen?',
-  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_ONLY_ACTIVE_DESC'   => 'Soll das Modul im Frontend Content-Inhalte anzeigen, die den Status "aktiv" = Nein besitzen?',
-  'MITS_CONTENTFORPRODUCTSANDCATEGORIES_TEXT'                  => 'Content-Seite Nr.',
-  'MITS_CONTENTFORPRODUCTSANDCATEGORIES_TOOLTIP'               => 'Im Template verf&uuml;gbare Smarty-Variablen:<br>',
-  'MODULE_PRODUCT_MITS_CONTENTFORPRODUCTSLISTING_TITLE'        => 'MITS Content f&uuml;r Artikel und Kategorien  <span style="white-space:nowrap;">&copy; by <span style="padding:2px;background:#ffe;color:#6a9;font-weight:bold;">Hetfield (MerZ IT-SerVice)</span></span>',
-  'MODULE_PRODUCT_MITS_CONTENTFORPRODUCTSLISTING_DESCRIPTION'  => '
+  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_STATUS_TITLE'                 => 'Modul aktivieren?',
+  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_STATUS_DESC'                  => 'Das Modul MITS Content f&uuml;r Artikel und Kategorien aktivieren',
+  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_ONLY_ACTIVE_TITLE'            => 'Inaktiven Content anzeigen?',
+  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_ONLY_ACTIVE_DESC'             => 'Soll das Modul im Frontend Content-Inhalte anzeigen, die den Status "aktiv" = Nein besitzen?',
+  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_UPDATE_AVAILABLE_TITLE'       => ' <span style="font-weight:bold;color:#900;background:#ff6;padding:2px;border:1px solid #900;">Bitte Modulaktualisierung durchf&uuml;hren!</span>',
+  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_UPDATE_AVAILABLE_DESC'        => '',
+  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_UPDATE_FINISHED'              => 'Das Modul MITS Content f&uuml;r Artikel und Kategorien wurde aktualisiert.',
+  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_UPDATE_ERROR'                 => 'Fehler',
+  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_UPDATE_MODUL'                 => 'Modul aktualisieren',
+  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_DELETE_MODUL'                 => 'MITS Content f&uuml;r Artikel und Kategorien komplett vom Server entfernen',
+  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_CONFIRM_DELETE_MODUL'         => 'M&ouml;chten sie das Modul MITS Content f&uuml;r Artikel und Kategorien mit allen Dateien wirklich vom Server l&ouml;schen?',
+  'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_DELETE_FINISHED'              => 'Das Modul MITS Content f&uuml;r Artikel und Kategorien wurde vom Server gel&ouml;scht.',
+  'MITS_CONTENTFORPRODUCTSANDCATEGORIES_TEXT'                            => 'Content-Seite Nr.',
+  'MITS_CONTENTFORPRODUCTSANDCATEGORIES_TOOLTIP'                         => 'Im Template verf&uuml;gbare Smarty-Variablen:<br>',
+  'MODULE_PRODUCT_MITS_CONTENTFORPRODUCTSLISTING_TITLE'                  => 'MITS Content f&uuml;r Artikel und Kategorien  <span style="white-space:nowrap;">&copy; by <span style="padding:2px;background:#ffe;color:#6a9;font-weight:bold;">Hetfield (MerZ IT-SerVice)</span></span>',
+  'MODULE_PRODUCT_MITS_CONTENTFORPRODUCTSLISTING_DESCRIPTION'            => '
     <a href="https://www.merz-it-service.de/" target="_blank">
       <img src="' . (ENABLE_SSL === true ? HTTPS_SERVER : HTTP_SERVER) . DIR_WS_CATALOG . DIR_WS_IMAGES . 'merz-it-service.png" border="0" alt="MerZ IT-SerVice" style="display:block;max-width:100%;height:auto;">
     </a><br>
@@ -61,8 +69,16 @@ $lang_array = array(
     </div>
     <p>Bei Fragen, Problemen oder W&uuml;nschen zu diesem Modul oder auch zu anderen Anliegen rund um die modified eCommerce Shopsoftware nehmen Sie einfach Kontakt zu uns auf:</p> 
     <div style="text-align:center;"><a style="background:#6a9;color:#444" target="_blank" href="https://www.merz-it-service.de/Kontakt.html" class="button" onclick="this.blur();">Kontaktseite auf MerZ-IT-SerVice.de</strong></a></div>',
-  'MODULE_PRODUCT_MITS_CONTENTFORPRODUCTSLISTING_STATUS_TITLE' => 'Modul aktivieren?',
-  'MODULE_PRODUCT_MITS_CONTENTFORPRODUCTSLISTING_STATUS_DESC'  => 'Das Modul MITS Content f&uuml;r Artikel und Kategorien aktivieren',
+  'MODULE_PRODUCT_MITS_CONTENTFORPRODUCTSLISTING_STATUS_TITLE'           => 'Modul aktivieren?',
+  'MODULE_PRODUCT_MITS_CONTENTFORPRODUCTSLISTING_STATUS_DESC'            => 'Das Modul MITS Content f&uuml;r Artikel und Kategorien aktivieren',
+  'MODULE_PRODUCT_MITS_CONTENTFORPRODUCTSLISTING_UPDATE_AVAILABLE_TITLE' => ' <span style="font-weight:bold;color:#900;background:#ff6;padding:2px;border:1px solid #900;">Bitte Modulaktualisierung durchf&uuml;hren!</span>',
+  'MODULE_PRODUCT_MITS_CONTENTFORPRODUCTSLISTING_UPDATE_AVAILABLE_DESC'  => '',
+  'MODULE_PRODUCT_MITS_CONTENTFORPRODUCTSLISTING_UPDATE_FINISHED'        => 'Das Modul MITS Content f&uuml;r Artikel und Kategorien wurde aktualisiert.',
+  'MODULE_PRODUCT_MITS_CONTENTFORPRODUCTSLISTING_UPDATE_ERROR'           => 'Fehler',
+  'MODULE_PRODUCT_MITS_CONTENTFORPRODUCTSLISTING_UPDATE_MODUL'           => 'Modul aktualisieren',
+  'MODULE_PRODUCT_MITS_CONTENTFORPRODUCTSLISTING_DELETE_MODUL'           => 'MITS Content f&uuml;r Artikel und Kategorien komplett vom Server entfernen',
+  'MODULE_PRODUCT_MITS_CONTENTFORPRODUCTSLISTING_CONFIRM_DELETE_MODUL'   => 'M&ouml;chten sie das Modul MITS Content f&uuml;r Artikel und Kategorien mit allen Dateien wirklich vom Server l&ouml;schen?',
+  'MODULE_PRODUCT_MITS_CONTENTFORPRODUCTSLISTING_DELETE_FINISHED'        => 'Das Modul MITS Content f&uuml;r Artikel und Kategorien wurde vom Server gel&ouml;scht.',
 );
 
 foreach ($lang_array as $key => $val) {
