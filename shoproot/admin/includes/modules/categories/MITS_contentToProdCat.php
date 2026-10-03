@@ -29,7 +29,7 @@ class MITS_contentToProdCat
     {
         $this->code = 'MITS_contentToProdCat';
         $this->name = 'MODULE_CATEGORIES_' . strtoupper($this->code);
-        $this->version = '1.0.6';
+        $this->version = '1.0.7';
         $this->sort_order = defined($this->name . '_SORT_ORDER') ? constant($this->name . '_SORT_ORDER') : 0;
         $this->enabled = defined($this->name . '_STATUS') && (constant($this->name . '_STATUS') == 'true');
 
@@ -56,7 +56,13 @@ class MITS_contentToProdCat
 
         if (is_file($mitsUpdateClientFile)) {
             require_once $mitsUpdateClientFile;
-            MitsModuleUpdateClient::integrate($this);
+
+            MitsModuleUpdateClient::integrate(
+              $this,
+              array(
+                'module_key' => 'MITS_ContentToProductCategory'
+              )
+            );
         }
     }
 
