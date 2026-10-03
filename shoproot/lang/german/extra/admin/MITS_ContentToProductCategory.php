@@ -37,10 +37,6 @@ $lang_array = array(
 &lt;div class="pd_description"&gt;{$MITS_CONTENT_TEXT_1}&lt;/div&gt;
 {/if}
     </code></pre>
-    <div style="text-align:center;">
-      <small>Nur auf Github gibt es immer die aktuellste Version des Moduls!</small><br />
-      <a style="background:#6a9;color:#444" target="_blank" href="https://github.com/hetfield74/MITS_ContentToProductsAndCategories" class="button" onclick="this.blur();">MITS Content f&uuml;r Artikel und Kategorien on Github</a>
-    </div>
     <p>Bei Fragen, Problemen oder W&uuml;nschen zu diesem Modul oder auch zu anderen Anliegen rund um die modified eCommerce Shopsoftware nehmen Sie einfach Kontakt zu uns auf:</p> 
     <div style="text-align:center;"><a style="background:#6a9;color:#444" target="_blank" href="https://www.merz-it-service.de/Kontakt.html" class="button" onclick="this.blur();">Kontaktseite auf MerZ-IT-SerVice.de</strong></a></div>',
   'MODULE_CATEGORIES_MITS_CONTENTTOPRODCAT_STATUS_TITLE'                 => 'Modul aktivieren?',
@@ -63,10 +59,6 @@ $lang_array = array(
       <img src="' . (ENABLE_SSL === true ? HTTPS_SERVER : HTTP_SERVER) . DIR_WS_CATALOG . DIR_WS_IMAGES . 'merz-it-service.png" border="0" alt="MerZ IT-SerVice" style="display:block;max-width:100%;height:auto;">
     </a><br>
     <p>Diese Klassenerweiterung ist eine Erweiterung zum Modul <b>MITS Content f&uuml;r Artikel und Kategorien</b> und erm&ouml;glicht die Anzeige der Content-Seiten auch in den Artikellisten der Kategorien.</p>
-    <div style="text-align:center;">
-      <small>Nur auf Github gibt es immer die aktuellste Version des Moduls!</small><br />
-      <a style="background:#6a9;color:#444" target="_blank" href="https://github.com/hetfield74/MITS_ContentToProductsAndCategories" class="button" onclick="this.blur();">MITS Content f&uuml;r Artikel und Kategorien on Github</a>
-    </div>
     <p>Bei Fragen, Problemen oder W&uuml;nschen zu diesem Modul oder auch zu anderen Anliegen rund um die modified eCommerce Shopsoftware nehmen Sie einfach Kontakt zu uns auf:</p> 
     <div style="text-align:center;"><a style="background:#6a9;color:#444" target="_blank" href="https://www.merz-it-service.de/Kontakt.html" class="button" onclick="this.blur();">Kontaktseite auf MerZ-IT-SerVice.de</strong></a></div>',
   'MODULE_PRODUCT_MITS_CONTENTFORPRODUCTSLISTING_STATUS_TITLE'           => 'Modul aktivieren?',

@@ -29,7 +29,7 @@ class MITS_contentToProdCat
     {
         $this->code = 'MITS_contentToProdCat';
         $this->name = 'MODULE_CATEGORIES_' . strtoupper($this->code);
-        $this->version = '1.0.5';
+        $this->version = '1.0.6';
         $this->sort_order = defined($this->name . '_SORT_ORDER') ? constant($this->name . '_SORT_ORDER') : 0;
         $this->enabled = defined($this->name . '_STATUS') && (constant($this->name . '_STATUS') == 'true');
 
@@ -50,6 +50,13 @@ class MITS_contentToProdCat
             $this->description .= '<div style="text-align:center;margin:30px 0"><a class="button but_red" style="text-align:center;" onclick="return confirmLink(\'' . constant($this->name . '_CONFIRM_DELETE_MODUL') . '\', \'\' ,this);" href="' . xtc_href_link(FILENAME_MODULES, 'set=categories&module=' . $this->code . '&action=custom') . '">' . constant(
                 $this->name . '_DELETE_MODUL'
               ) . '</a></div><br>';
+        }
+
+        $mitsUpdateClientFile = DIR_FS_CATALOG . 'includes/external/mits_module_update_client/MitsModuleUpdateClient.php';
+
+        if (is_file($mitsUpdateClientFile)) {
+            require_once $mitsUpdateClientFile;
+            MitsModuleUpdateClient::integrate($this);
         }
     }
 
@@ -218,7 +225,6 @@ class MITS_contentToProdCat
           DIR_FS_DOCUMENT_ROOT . (defined('DIR_ADMIN') ? DIR_ADMIN : 'admin/') . 'includes/extra/modules/new_product/00_MITS_ContentToProduct.php',
           DIR_FS_DOCUMENT_ROOT . 'lang/english/extra/admin/MITS_ContentToProductCategory.php',
           DIR_FS_DOCUMENT_ROOT . 'lang/german/extra/admin/MITS_ContentToProductCategory.php',
-          DIR_FS_DOCUMENT_ROOT . 'images/merz-it-service.png',
           DIR_FS_DOCUMENT_ROOT . 'includes/extra/default/categories_content/MITS_ContentToCategory.php',
           DIR_FS_DOCUMENT_ROOT . 'includes/extra/default/categories_content/MITS_ContentToCategory.php',
           DIR_FS_DOCUMENT_ROOT . 'includes/extra/define_add_select/MITS_ContentToProductCategory.php',
