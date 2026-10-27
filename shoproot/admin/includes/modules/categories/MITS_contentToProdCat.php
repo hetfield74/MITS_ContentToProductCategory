@@ -29,7 +29,7 @@ class MITS_contentToProdCat
     {
         $this->code = 'MITS_contentToProdCat';
         $this->name = 'MODULE_CATEGORIES_' . strtoupper($this->code);
-        $this->version = '1.0.7';
+        $this->version = '1.0.8';
         $this->sort_order = defined($this->name . '_SORT_ORDER') ? constant($this->name . '_SORT_ORDER') : 0;
         $this->enabled = defined($this->name . '_STATUS') && (constant($this->name . '_STATUS') == 'true');
 
@@ -51,18 +51,19 @@ class MITS_contentToProdCat
                 $this->name . '_DELETE_MODUL'
               ) . '</a></div><br>';
         }
+				
+				if (defined('RUN_MODE_ADMIN')) {
+            $mitsUpdateClientFile = DIR_FS_CATALOG . 'includes/external/mits_module_update_client/MitsModuleUpdateClient.php';
 
-        $mitsUpdateClientFile = DIR_FS_CATALOG . 'includes/external/mits_module_update_client/MitsModuleUpdateClient.php';
-
-        if (is_file($mitsUpdateClientFile)) {
-            require_once $mitsUpdateClientFile;
-
-            MitsModuleUpdateClient::integrate(
-              $this,
-              array(
-                'module_key' => 'MITS_ContentToProductCategory'
-              )
-            );
+            if (is_file($mitsUpdateClientFile)) {
+                require_once $mitsUpdateClientFile;
+                MitsModuleUpdateClient::integrate(
+								  $this,
+									array(
+										'module_key' => 'MITS_ContentToProductCategory'
+									)
+								);
+            }
         }
     }
 
